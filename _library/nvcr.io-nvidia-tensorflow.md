@@ -3,7 +3,7 @@ layout: container
 name:  "nvcr.io/nvidia/tensorflow"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/nvcr.io/nvidia/tensorflow/container.yaml"
-updated_at: "2022-02-01 01:28:34.846151"
+updated_at: "2022-07-07 17:18:57.903576"
 container_url: "https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags"
 
 versions:
@@ -16,12 +16,20 @@ versions:
  - "21.10-tf1-py3"
  - "21.11-tf1-py3"
  - "21.12-tf1-py3"
+ - "22.03-tf2-py3"
+ - "22.02-tf2-py3"
+ - "22.01-tf2-py3"
+ - "21.12-tf2-py3"
+ - "21.11-tf2-py3"
+ - "22.04-tf2-py3"
+ - "22.05-tf2-py3"
 description: "TensorFlow is an open-source software library for high-performance numerical computation. Its flexible architecture allows easy deployment of computation across a variety of platforms (CPUs, GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices."
 ---
 
 This module is a singularity container wrapper for nvcr.io/nvidia/tensorflow.
 TensorFlow is an open-source software library for high-performance numerical computation. Its flexible architecture allows easy deployment of computation across a variety of platforms (CPUs, GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install nvcr.io/nvidia/tensorflow
@@ -52,10 +60,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### tensorflow-run:
 
 ```bash
 $ singularity run <container>
@@ -63,7 +71,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### tensorflow-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -71,15 +79,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### tensorflow-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### tensorflow-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -88,13 +96,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### tensorflow-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### tensorflow-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -102,7 +110,7 @@ $ singularity inspect -d <container>
 
 
 
-#### 
+#### tensorflow
 
 ```bash
 $ singularity run <container>

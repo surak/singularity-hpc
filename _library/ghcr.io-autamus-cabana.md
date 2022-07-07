@@ -3,18 +3,20 @@ layout: container
 name:  "ghcr.io/autamus/cabana"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/cabana/container.yaml"
-updated_at: "2022-02-01 01:28:49.605549"
+updated_at: "2022-07-07 17:19:26.976333"
 container_url: "https://github.com/orgs/autamus/packages/container/package/cabana"
 
 versions:
  - "0.3.0"
  - "0.4.0"
+ - "latest"
 description: "The Exascale Co-Design Center for Particle Applications Toolkit"
 ---
 
 This module is a singularity container wrapper for ghcr.io/autamus/cabana.
 The Exascale Co-Design Center for Particle Applications Toolkit
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install ghcr.io/autamus/cabana
@@ -45,10 +47,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### cabana-run:
 
 ```bash
 $ singularity run <container>
@@ -56,7 +58,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### cabana-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -64,15 +66,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### cabana-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### cabana-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -81,13 +83,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### cabana-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### cabana-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -95,7 +97,7 @@ $ singularity inspect -d <container>
 
 
 
-#### 
+#### cabana
 
 ```bash
 $ singularity run <container>

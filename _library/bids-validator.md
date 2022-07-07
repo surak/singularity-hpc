@@ -3,7 +3,7 @@ layout: container
 name:  "bids/validator"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/bids/validator/container.yaml"
-updated_at: "2022-02-01 01:28:08.509130"
+updated_at: "2022-07-07 17:18:52.720589"
 container_url: "https://hub.docker.com/r/bids/validator"
 aliases:
  - "bids-validator"
@@ -17,12 +17,14 @@ versions:
  - "v1.8.1-dev.0"
  - "v1.8.5"
  - "v1.8.9"
+ - "v1.9.2"
 description: "A validator for BIDS (Brain Imaging Data Structure) datasets."
 ---
 
 This module is a singularity container wrapper for bids/validator.
 A validator for BIDS (Brain Imaging Data Structure) datasets.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install bids/validator
@@ -53,10 +55,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### validator-run:
 
 ```bash
 $ singularity run <container>
@@ -64,7 +66,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### validator-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -72,15 +74,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### validator-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### validator-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -89,13 +91,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### validator-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### validator-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

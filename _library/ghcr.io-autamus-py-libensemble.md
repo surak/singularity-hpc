@@ -3,18 +3,20 @@ layout: container
 name:  "ghcr.io/autamus/py-libensemble"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/py-libensemble/container.yaml"
-updated_at: "2022-02-01 01:28:54.624944"
+updated_at: "2022-07-07 17:19:37.841939"
 container_url: "https://github.com/orgs/autamus/packages/container/package/py-libensemble"
 
 versions:
  - "0.7.2"
  - "0.8.0"
+ - "latest"
 description: "Library for managing ensemble-like collections of computations."
 ---
 
 This module is a singularity container wrapper for ghcr.io/autamus/py-libensemble.
 Library for managing ensemble-like collections of computations.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install ghcr.io/autamus/py-libensemble
@@ -45,10 +47,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### py-libensemble-run:
 
 ```bash
 $ singularity run <container>
@@ -56,7 +58,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### py-libensemble-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -64,15 +66,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### py-libensemble-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### py-libensemble-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -81,13 +83,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### py-libensemble-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### py-libensemble-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -95,7 +97,7 @@ $ singularity inspect -d <container>
 
 
 
-#### 
+#### py-libensemble
 
 ```bash
 $ singularity run <container>

@@ -3,7 +3,7 @@ layout: container
 name:  "redis"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/redis/container.yaml"
-updated_at: "2022-02-01 01:28:23.795970"
+updated_at: "2022-07-07 17:20:49.586778"
 container_url: "https://hub.docker.com/r/_/redis"
 aliases:
  - "redis-benchmark"
@@ -23,13 +23,23 @@ versions:
  - "6.2.4-alpine"
  - "6.2.5"
  - "6.2.6"
+ - "7.0-rc"
  - "latest"
+ - "6"
+ - "6-alpine3.15"
+ - "6.2"
+ - "7"
+ - "7-alpine3.15"
+ - "7.0"
+ - "7-alpine3.16"
+ - "6-alpine3.16"
 description: "Redis is an open-source, networked, in-memory, key-value data store with optional durability."
 ---
 
 This module is a singularity container wrapper for redis.
 Redis is an open-source, networked, in-memory, key-value data store with optional durability.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install redis
@@ -60,10 +70,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### redis-run:
 
 ```bash
 $ singularity run <container>
@@ -71,7 +81,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### redis-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -79,15 +89,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### redis-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### redis-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -96,13 +106,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### redis-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### redis-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

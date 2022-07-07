@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/libtiff"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/libtiff/container.yaml"
-updated_at: "2022-02-01 01:28:46.788250"
+updated_at: "2022-07-07 17:19:20.904041"
 container_url: "https://github.com/orgs/autamus/packages/container/package/libtiff"
 aliases:
  - "fax2tiff"
@@ -42,12 +42,14 @@ versions:
  - "4.1.0"
  - "4.3.0"
  - "latest"
+ - "4.2.0"
 description: "Libtiff is a library for reading and writing Tagged Image File Format (abbreviated TIFF) files."
 ---
 
 This module is a singularity container wrapper for ghcr.io/autamus/libtiff.
 Libtiff is a library for reading and writing Tagged Image File Format (abbreviated TIFF) files.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install ghcr.io/autamus/libtiff
@@ -78,10 +80,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### libtiff-run:
 
 ```bash
 $ singularity run <container>
@@ -89,7 +91,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### libtiff-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -97,15 +99,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### libtiff-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### libtiff-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -114,13 +116,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### libtiff-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### libtiff-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

@@ -3,19 +3,26 @@ layout: container
 name:  "nvcr.io/nvidia/rapidsai/rapidsai"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/nvcr.io/nvidia/rapidsai/rapidsai/container.yaml"
-updated_at: "2022-02-01 01:28:33.937873"
+updated_at: "2022-07-07 17:18:59.195590"
 container_url: "https://ngc.nvidia.com/catalog/containers/nvidia:rapidsai:rapidsai/tags"
 aliases:
  - "python"
 
 versions:
  - "0.18-cuda11.0-runtime-centos7"
+ - "22.02-cuda11.5-runtime-ubuntu20.04"
+ - "21.10-cuda11.2-runtime-ubuntu20.04"
+ - "21.08-cuda11.2-runtime-ubuntu20.04"
+ - "21.06-cuda11.2-runtime-ubuntu20.04"
+ - "cuda11.5-runtime-ubuntu20.04"
+ - "22.04-cuda11.5-runtime-ubuntu20.04"
 description: "The RAPIDS suite of software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs."
 ---
 
 This module is a singularity container wrapper for nvcr.io/nvidia/rapidsai/rapidsai.
 The RAPIDS suite of software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install nvcr.io/nvidia/rapidsai/rapidsai
@@ -46,10 +53,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### rapidsai-run:
 
 ```bash
 $ singularity run <container>
@@ -57,7 +64,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### rapidsai-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -65,15 +72,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### rapidsai-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### rapidsai-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -82,13 +89,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### rapidsai-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### rapidsai-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

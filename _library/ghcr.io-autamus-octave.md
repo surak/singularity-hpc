@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/octave"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/octave/container.yaml"
-updated_at: "2022-02-01 01:29:15.096103"
+updated_at: "2022-07-07 17:20:05.555090"
 container_url: "https://github.com/orgs/autamus/packages/container/package/octave"
 aliases:
  - "octave"
@@ -21,13 +21,16 @@ aliases:
 versions:
  - "6.2.0"
  - "6.3.0"
+ - "6.4.0"
  - "latest"
+ - "7.1.0"
 description: "GNU Octave is a high-level interpreted language, primarily intended for numerical computations (like an open source Matlab)"
 ---
 
 This module is a singularity container wrapper for ghcr.io/autamus/octave.
 GNU Octave is a high-level interpreted language, primarily intended for numerical computations (like an open source Matlab)
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install ghcr.io/autamus/octave
@@ -58,10 +61,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### octave-run:
 
 ```bash
 $ singularity run <container>
@@ -69,7 +72,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### octave-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -77,15 +80,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### octave-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### octave-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -94,13 +97,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### octave-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### octave-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

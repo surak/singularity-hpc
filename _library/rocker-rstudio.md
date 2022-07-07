@@ -3,7 +3,7 @@ layout: container
 name:  "rocker/rstudio"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/rocker/rstudio/container.yaml"
-updated_at: "2022-02-01 01:28:22.613320"
+updated_at: "2022-07-07 17:19:01.381977"
 container_url: "https://hub.docker.com/r/rocker/rstudio"
 aliases:
  - "R"
@@ -22,12 +22,14 @@ aliases:
 
 versions:
  - "latest"
+ - "latest-daily"
 description: "Rstudio server image"
 ---
 
 This module is a singularity container wrapper for rocker/rstudio.
 Rstudio server image
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install rocker/rstudio
@@ -58,10 +60,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### rstudio-run:
 
 ```bash
 $ singularity run <container>
@@ -69,7 +71,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### rstudio-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -77,15 +79,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### rstudio-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### rstudio-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -94,13 +96,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### rstudio-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### rstudio-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

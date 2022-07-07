@@ -3,7 +3,7 @@ layout: container
 name:  "kibana"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/kibana/container.yaml"
-updated_at: "2022-02-01 01:28:28.879430"
+updated_at: "2022-07-07 17:19:03.557309"
 container_url: "https://hub.docker.com/_/kibana"
 aliases:
  - "kibana"
@@ -24,12 +24,21 @@ versions:
  - "7.14.2"
  - "7.16.2"
  - "7.16.3"
+ - "8.0.0"
+ - "8.1.2"
+ - "8.0.1"
+ - "7.17.2"
+ - "8.1.3"
+ - "7.17.3"
+ - "8.2.2"
+ - "7.17.4"
 description: "Kibana gives shape to any kind of data — structured and unstructured — indexed in Elasticsearch."
 ---
 
 This module is a singularity container wrapper for kibana.
 Kibana gives shape to any kind of data — structured and unstructured — indexed in Elasticsearch.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install kibana
@@ -60,10 +69,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### kibana-run:
 
 ```bash
 $ singularity run <container>
@@ -71,7 +80,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### kibana-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -79,15 +88,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### kibana-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### kibana-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -96,13 +105,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### kibana-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### kibana-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

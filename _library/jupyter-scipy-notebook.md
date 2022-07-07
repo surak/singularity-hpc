@@ -3,7 +3,7 @@ layout: container
 name:  "jupyter/scipy-notebook"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/jupyter/scipy-notebook/container.yaml"
-updated_at: "2022-02-01 01:28:30.962720"
+updated_at: "2022-07-07 17:20:52.258846"
 container_url: "https://hub.docker.com/r/jupyter/scipy-notebook"
 aliases:
  - "run-notebook"
@@ -11,12 +11,20 @@ aliases:
 versions:
  - "4.0"
  - "latest"
+ - "2022-04-05"
+ - "2022-03-28"
+ - "2022-02-28"
+ - "2022-01-31"
+ - "2021-12-27"
+ - "2022-04-25"
+ - "2022-05-31"
 description: "Jupyter Notebook Scientific Python Stack from https://github.com/jupyter/docker-stacks"
 ---
 
 This module is a singularity container wrapper for jupyter/scipy-notebook.
 Jupyter Notebook Scientific Python Stack from https://github.com/jupyter/docker-stacks
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install jupyter/scipy-notebook
@@ -47,10 +55,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### scipy-notebook-run:
 
 ```bash
 $ singularity run <container>
@@ -58,7 +66,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### scipy-notebook-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -66,15 +74,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### scipy-notebook-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### scipy-notebook-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -83,13 +91,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### scipy-notebook-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### scipy-notebook-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

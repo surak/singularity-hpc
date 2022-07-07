@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/fastqc"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/fastqc/container.yaml"
-updated_at: "2022-02-01 01:28:18.004798"
+updated_at: "2022-07-07 17:20:33.545573"
 container_url: "https://quay.io/repository/biocontainers/fastqc"
 aliases:
  - "fastqc"
@@ -11,12 +11,14 @@ aliases:
 versions:
  - "0.11.7--hdfd78af_7"
  - "0.11.9--0"
+ - "0.11.9--hdfd78af_1"
 description: "A quality control tool for high throughput sequence data"
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/fastqc.
 A quality control tool for high throughput sequence data
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/fastqc
@@ -47,10 +49,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### fastqc-run:
 
 ```bash
 $ singularity run <container>
@@ -58,7 +60,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### fastqc-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -66,15 +68,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### fastqc-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### fastqc-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -83,13 +85,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### fastqc-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### fastqc-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

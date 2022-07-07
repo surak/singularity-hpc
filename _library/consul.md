@@ -3,7 +3,7 @@ layout: container
 name:  "consul"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/consul/container.yaml"
-updated_at: "2022-02-01 01:28:05.288693"
+updated_at: "2022-07-07 17:20:50.475472"
 container_url: "https://hub.docker.com/_/consul"
 aliases:
  - "consul"
@@ -17,13 +17,20 @@ versions:
  - "1.11.0-beta"
  - "1.11.1"
  - "1.11.2"
+ - "1.11.3"
  - "latest"
+ - "1.11"
+ - "1.10"
+ - "1.9"
+ - "1.8"
+ - "1.12"
 description: "Consul is a datacenter runtime that provides service discovery, configuration, and orchestration."
 ---
 
 This module is a singularity container wrapper for consul.
 Consul is a datacenter runtime that provides service discovery, configuration, and orchestration.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install consul
@@ -54,10 +61,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### consul-run:
 
 ```bash
 $ singularity run <container>
@@ -65,7 +72,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### consul-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -73,15 +80,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### consul-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### consul-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -90,13 +97,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### consul-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### consul-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

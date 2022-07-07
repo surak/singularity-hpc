@@ -3,17 +3,19 @@ layout: container
 name:  "nvcr.io/hpc/lammps"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/nvcr.io/hpc/lammps/container.yaml"
-updated_at: "2022-02-01 01:28:37.221972"
+updated_at: "2022-07-07 17:18:56.174731"
 container_url: "https://ngc.nvidia.com/catalog/containers/hpc:lammps/tags"
 
 versions:
  - "29Oct2020"
+ - "29Sep2021"
 description: "Large-scale Atomic/Molecular Massively Parallel Simulator (LAMMPS) is a software application designed for molecular dynamics simulations. It has the potentials for solid-state materials (metals, semiconductor), soft matter (biomolecules, polymers), and coarse-grained or mesoscopic systems. The main use-case is atom scale particle modeling or, more generically, as a parallel particle simulator at the atomic, meson, or continuum scale. LAMMPS runs on single processors or in parallel using message-passing techniques and a spatial-decomposition of the simulation domain. Read more on the LAMMPS website https://lammps.sandia.gov/."
 ---
 
 This module is a singularity container wrapper for nvcr.io/hpc/lammps.
 Large-scale Atomic/Molecular Massively Parallel Simulator (LAMMPS) is a software application designed for molecular dynamics simulations. It has the potentials for solid-state materials (metals, semiconductor), soft matter (biomolecules, polymers), and coarse-grained or mesoscopic systems. The main use-case is atom scale particle modeling or, more generically, as a parallel particle simulator at the atomic, meson, or continuum scale. LAMMPS runs on single processors or in parallel using message-passing techniques and a spatial-decomposition of the simulation domain. Read more on the LAMMPS website https://lammps.sandia.gov/.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install nvcr.io/hpc/lammps
@@ -44,10 +46,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### lammps-run:
 
 ```bash
 $ singularity run <container>
@@ -55,7 +57,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### lammps-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -63,15 +65,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### lammps-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### lammps-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -80,13 +82,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### lammps-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### lammps-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -94,7 +96,7 @@ $ singularity inspect -d <container>
 
 
 
-#### 
+#### lammps
 
 ```bash
 $ singularity run <container>

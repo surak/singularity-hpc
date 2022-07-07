@@ -3,7 +3,7 @@ layout: container
 name:  "tomcat"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/tomcat/container.yaml"
-updated_at: "2022-02-01 01:28:21.138906"
+updated_at: "2022-07-07 17:20:50.031041"
 container_url: "https://hub.docker.com/_/tomcat"
 
 versions:
@@ -13,12 +13,18 @@ versions:
  - "10.0.8-jdk11-adoptopenjdk-hotspot"
  - "10.1.0"
  - "latest"
+ - "10"
+ - "10-jdk17"
+ - "10-jdk16"
+ - "10-jdk15"
+ - "10-jdk14"
 description: "Apache Tomcat is an open source implementation of the Java Servlet and JavaServer Pages technologies"
 ---
 
 This module is a singularity container wrapper for tomcat.
 Apache Tomcat is an open source implementation of the Java Servlet and JavaServer Pages technologies
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install tomcat
@@ -49,10 +55,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### tomcat-run:
 
 ```bash
 $ singularity run <container>
@@ -60,7 +66,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### tomcat-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -68,15 +74,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### tomcat-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### tomcat-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -85,13 +91,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### tomcat-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### tomcat-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -99,7 +105,7 @@ $ singularity inspect -d <container>
 
 
 
-#### 
+#### tomcat
 
 ```bash
 $ singularity run <container>

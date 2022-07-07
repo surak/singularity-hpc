@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/trinity"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/trinity/container.yaml"
-updated_at: "2022-02-01 01:28:17.692051"
+updated_at: "2022-07-07 17:20:36.200643"
 container_url: "https://quay.io/repository/biocontainers/trinity"
 aliases:
  - "Trinity"
@@ -15,12 +15,15 @@ versions:
  - "2.12.0--h5ef6573_0"
  - "2.12.0--ha140323_1"
  - "2.13.2--ha140323_0"
+ - "2.13.2--h15cb65e_2"
+ - "2.12.0--ha140323_3"
 description: "Trinity, developed at the Broad Institute and the Hebrew University of Jerusalem, represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data."
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/trinity.
 Trinity, developed at the Broad Institute and the Hebrew University of Jerusalem, represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/trinity
@@ -51,10 +54,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### trinity-run:
 
 ```bash
 $ singularity run <container>
@@ -62,7 +65,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### trinity-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -70,15 +73,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### trinity-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### trinity-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -87,13 +90,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### trinity-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### trinity-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

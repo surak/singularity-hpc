@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/bracken"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/bracken/container.yaml"
-updated_at: "2022-02-01 01:28:17.398006"
+updated_at: "2022-07-07 17:20:37.584756"
 container_url: "https://quay.io/repository/biocontainers/bracken"
 aliases:
  - "bracken"
@@ -19,14 +19,16 @@ aliases:
  - "kmer2read_distr"
 
 versions:
- - "2.6.1--py27h2bce143_0"
  - "2.6.1--py39h7cff6ad_2"
+ - "2.6.1--py39hc16433a_3"
+ - "2.6.2--py39hc16433a_0"
 description: "A highly accurate statistical method that computes the abundance of species in DNA sequences from a metagenomics sample."
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/bracken.
 A highly accurate statistical method that computes the abundance of species in DNA sequences from a metagenomics sample.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/bracken
@@ -35,7 +37,7 @@ $ shpc install quay.io/biocontainers/bracken
 Or a specific version:
 
 ```bash
-$ shpc install quay.io/biocontainers/bracken:2.6.1--py27h2bce143_0
+$ shpc install quay.io/biocontainers/bracken:2.6.1--py39h7cff6ad_2
 ```
 
 And then you can tell lmod about your modules folder:
@@ -47,8 +49,8 @@ $ module use ./modules
 And load the module, and ask for help, or similar.
 
 ```bash
-$ module load quay.io/biocontainers/bracken/2.6.1--py27h2bce143_0
-$ module help quay.io/biocontainers/bracken/2.6.1--py27h2bce143_0
+$ module load quay.io/biocontainers/bracken/2.6.1--py39h7cff6ad_2
+$ module help quay.io/biocontainers/bracken/2.6.1--py39h7cff6ad_2
 ```
 
 You can use tab for auto-completion of module names or commands that are provided.
@@ -57,10 +59,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### bracken-run:
 
 ```bash
 $ singularity run <container>
@@ -68,7 +70,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### bracken-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -76,15 +78,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### bracken-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### bracken-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -93,13 +95,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### bracken-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### bracken-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

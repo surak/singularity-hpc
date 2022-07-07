@@ -3,7 +3,7 @@ layout: container
 name:  "nvcr.io/nvidia/pytorch"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/nvcr.io/nvidia/pytorch/container.yaml"
-updated_at: "2022-02-01 01:28:35.440434"
+updated_at: "2022-07-07 17:19:00.063379"
 container_url: "https://ngc.nvidia.com/catalog/containers/nvidia:pytorch/tags"
 
 versions:
@@ -17,12 +17,17 @@ versions:
  - "21.11-py3"
  - "21.12-py3"
  - "22.01-py3"
+ - "22.02-py3"
+ - "22.03-py3"
+ - "22.04-py3"
+ - "22.05-py3"
 description: "PyTorch is a GPU accelerated tensor computational framework with a Python front end. Functionality can be easily extended with common Python libraries such as NumPy, SciPy, and Cython. Automatic differentiation is done with a tape-based system at both a functional and neural network layer level."
 ---
 
 This module is a singularity container wrapper for nvcr.io/nvidia/pytorch.
 PyTorch is a GPU accelerated tensor computational framework with a Python front end. Functionality can be easily extended with common Python libraries such as NumPy, SciPy, and Cython. Automatic differentiation is done with a tape-based system at both a functional and neural network layer level.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install nvcr.io/nvidia/pytorch
@@ -53,10 +58,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### pytorch-run:
 
 ```bash
 $ singularity run <container>
@@ -64,7 +69,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### pytorch-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -72,15 +77,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### pytorch-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### pytorch-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -89,13 +94,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### pytorch-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### pytorch-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -103,7 +108,7 @@ $ singularity inspect -d <container>
 
 
 
-#### 
+#### pytorch
 
 ```bash
 $ singularity run <container>

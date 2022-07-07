@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/tasmanian"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/tasmanian/container.yaml"
-updated_at: "2022-02-01 01:28:38.987360"
+updated_at: "2022-07-07 17:20:07.337256"
 container_url: "https://github.com/orgs/autamus/packages/container/package/tasmanian"
 aliases:
  - "tasgrid"
@@ -11,12 +11,14 @@ aliases:
 versions:
  - "7.5"
  - "7.7"
+ - "latest"
 description: "The Toolkit for Adaptive Stochastic Modeling and Non-Intrusive ApproximatioN is a robust library for high dimensional integration and interpolation as well as parameter calibration.  https://tasmanian.ornl.gov"
 ---
 
 This module is a singularity container wrapper for ghcr.io/autamus/tasmanian.
 The Toolkit for Adaptive Stochastic Modeling and Non-Intrusive ApproximatioN is a robust library for high dimensional integration and interpolation as well as parameter calibration.  https://tasmanian.ornl.gov
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install ghcr.io/autamus/tasmanian
@@ -47,10 +49,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### tasmanian-run:
 
 ```bash
 $ singularity run <container>
@@ -58,7 +60,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### tasmanian-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -66,15 +68,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### tasmanian-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### tasmanian-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -83,13 +85,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### tasmanian-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### tasmanian-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

@@ -1,30 +1,36 @@
 ---
 layout: container
-name:  "biocontainers/bedtools"
+name:  "quay.io/pawsey/cuda-hpc-python"
 maintainer: "@vsoch"
-github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/biocontainers/bedtools/container.yaml"
-updated_at: "2022-02-01 01:28:26.457319"
-container_url: "https://hub.docker.com/r/biocontainers/bedtools"
+github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/pawsey/cuda-hpc-python/container.yaml"
+updated_at: "2022-07-07 17:20:31.760660"
+container_url: "https://quay.io/repository/pawsey/cuda-hpc-python"
 aliases:
- - "bedtools"
+ - "python"
+
+ - "python3"
 
 versions:
- - "v2.27.1dfsg-4-deb_cv1"
-description: "a powerful toolset for genome arithmetic"
+ - "2021.09"
+ - "2021.09-hdf5mpi"
+ - "2022.03"
+ - "2022.03-hdf5mpi"
+description: "Base Python images with popular packages for HPC workflows, with CUDA support."
 ---
 
-This module is a singularity container wrapper for biocontainers/bedtools.
-a powerful toolset for genome arithmetic
+This module is a singularity container wrapper for quay.io/pawsey/cuda-hpc-python.
+Base Python images with popular packages for HPC workflows, with CUDA support.
 After [installing shpc](#install) you will want to install this container module:
 
+
 ```bash
-$ shpc install biocontainers/bedtools
+$ shpc install quay.io/pawsey/cuda-hpc-python
 ```
 
 Or a specific version:
 
 ```bash
-$ shpc install biocontainers/bedtools:v2.27.1dfsg-4-deb_cv1
+$ shpc install quay.io/pawsey/cuda-hpc-python:2021.09
 ```
 
 And then you can tell lmod about your modules folder:
@@ -36,8 +42,8 @@ $ module use ./modules
 And load the module, and ask for help, or similar.
 
 ```bash
-$ module load biocontainers/bedtools/v2.27.1dfsg-4-deb_cv1
-$ module help biocontainers/bedtools/v2.27.1dfsg-4-deb_cv1
+$ module load quay.io/pawsey/cuda-hpc-python/2021.09
+$ module help quay.io/pawsey/cuda-hpc-python/2021.09
 ```
 
 You can use tab for auto-completion of module names or commands that are provided.
@@ -46,10 +52,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### cuda-hpc-python-run:
 
 ```bash
 $ singularity run <container>
@@ -57,7 +63,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### cuda-hpc-python-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -65,15 +71,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### cuda-hpc-python-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### cuda-hpc-python-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -82,25 +88,34 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### cuda-hpc-python-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### cuda-hpc-python-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
 ```
 
 
-#### bedtools
+#### python
        
 ```bash
-$ singularity exec <container> /usr/bin/bedtools
-$ podman run --it --rm --entrypoint /usr/bin/bedtools   -v ${PWD} -w ${PWD} <container> -c " $@"
-$ docker run --it --rm --entrypoint /usr/bin/bedtools   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ singularity exec <container> /usr/local/bin/python
+$ podman run --it --rm --entrypoint /usr/local/bin/python   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/python   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
+#### python3
+       
+```bash
+$ singularity exec <container> /usr/local/bin/python3
+$ podman run --it --rm --entrypoint /usr/local/bin/python3   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/python3   -v ${PWD} -w ${PWD} <container> -c " $@"
 ```
 
 

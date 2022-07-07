@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/bcftools"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/bcftools/container.yaml"
-updated_at: "2022-02-01 01:28:19.921355"
+updated_at: "2022-07-07 17:20:46.030064"
 container_url: "https://quay.io/repository/biocontainers/bcftools"
 aliases:
  - "bcftools"
@@ -12,9 +12,21 @@ aliases:
 
  - "color-chrs.pl"
 
+ - "gff2gff.py"
+
  - "guess-ploidy.py"
 
  - "htsfile"
+
+ - "libdeflate-gunzip"
+
+ - "libdeflate-gzip"
+
+ - "plot-roh.py"
+
+ - "plot-vcfstats"
+
+ - "run-roh.pl"
 
  - "tabix"
 
@@ -24,12 +36,14 @@ versions:
  - "1.12--h45bccc9_1"
  - "1.13--h3a49de5_0"
  - "1.14--h88f3f91_0"
+ - "1.15--haf5b3da_0"
 description: "BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF."
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/bcftools.
 BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/bcftools
@@ -60,10 +74,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### bcftools-run:
 
 ```bash
 $ singularity run <container>
@@ -71,7 +85,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### bcftools-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -79,15 +93,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### bcftools-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### bcftools-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -96,13 +110,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### bcftools-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### bcftools-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -136,6 +150,15 @@ $ docker run --it --rm --entrypoint /usr/local/bin/color-chrs.pl   -v ${PWD} -w 
 ```
 
 
+#### gff2gff.py
+       
+```bash
+$ singularity exec <container> /usr/local/bin/gff2gff.py
+$ podman run --it --rm --entrypoint /usr/local/bin/gff2gff.py   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/gff2gff.py   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
 #### guess-ploidy.py
        
 ```bash
@@ -151,6 +174,51 @@ $ docker run --it --rm --entrypoint /usr/local/bin/guess-ploidy.py   -v ${PWD} -
 $ singularity exec <container> /usr/local/bin/htsfile
 $ podman run --it --rm --entrypoint /usr/local/bin/htsfile   -v ${PWD} -w ${PWD} <container> -c " $@"
 $ docker run --it --rm --entrypoint /usr/local/bin/htsfile   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
+#### libdeflate-gunzip
+       
+```bash
+$ singularity exec <container> /usr/local/bin/libdeflate-gunzip
+$ podman run --it --rm --entrypoint /usr/local/bin/libdeflate-gunzip   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/libdeflate-gunzip   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
+#### libdeflate-gzip
+       
+```bash
+$ singularity exec <container> /usr/local/bin/libdeflate-gzip
+$ podman run --it --rm --entrypoint /usr/local/bin/libdeflate-gzip   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/libdeflate-gzip   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
+#### plot-roh.py
+       
+```bash
+$ singularity exec <container> /usr/local/bin/plot-roh.py
+$ podman run --it --rm --entrypoint /usr/local/bin/plot-roh.py   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/plot-roh.py   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
+#### plot-vcfstats
+       
+```bash
+$ singularity exec <container> /usr/local/bin/plot-vcfstats
+$ podman run --it --rm --entrypoint /usr/local/bin/plot-vcfstats   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/plot-vcfstats   -v ${PWD} -w ${PWD} <container> -c " $@"
+```
+
+
+#### run-roh.pl
+       
+```bash
+$ singularity exec <container> /usr/local/bin/run-roh.pl
+$ podman run --it --rm --entrypoint /usr/local/bin/run-roh.pl   -v ${PWD} -w ${PWD} <container> -c " $@"
+$ docker run --it --rm --entrypoint /usr/local/bin/run-roh.pl   -v ${PWD} -w ${PWD} <container> -c " $@"
 ```
 
 

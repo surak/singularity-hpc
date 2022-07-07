@@ -3,7 +3,7 @@ layout: container
 name:  "spack/ubuntu-bionic"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/spack/ubuntu-bionic/container.yaml"
-updated_at: "2022-02-01 01:28:31.840007"
+updated_at: "2022-07-07 17:19:03.990952"
 container_url: "https://hub.docker.com/r/spack/ubuntu-bionic"
 aliases:
  - "sbang"
@@ -17,12 +17,17 @@ versions:
  - "0.16.2"
  - "0.16.3"
  - "latest"
+ - "0.16"
+ - "prerelease"
+ - "v0.17.2"
+ - "v0.18.0"
 description: "Ubuntu 18.04 with Spack preinstalled."
 ---
 
 This module is a singularity container wrapper for spack/ubuntu-bionic.
 Ubuntu 18.04 with Spack preinstalled.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install spack/ubuntu-bionic
@@ -53,10 +58,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### ubuntu-bionic-run:
 
 ```bash
 $ singularity run <container>
@@ -64,7 +69,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### ubuntu-bionic-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -72,15 +77,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### ubuntu-bionic-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### ubuntu-bionic-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -89,13 +94,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### ubuntu-bionic-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### ubuntu-bionic-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

@@ -3,7 +3,7 @@ layout: container
 name:  "golang"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/golang/container.yaml"
-updated_at: "2022-02-01 01:28:23.189474"
+updated_at: "2022-07-07 17:18:54.013847"
 container_url: "https://hub.docker.com/r/_/golang"
 aliases:
  - "go"
@@ -19,12 +19,17 @@ versions:
  - "1.17.3"
  - "1.18-rc"
  - "latest"
+ - "1"
+ - "1.18"
+ - "1.17rc2"
+ - "1.17rc2-buster"
 description: "Go (a.k.a., Golang) is a programming language first developed at Google."
 ---
 
 This module is a singularity container wrapper for golang.
 Go (a.k.a., Golang) is a programming language first developed at Google.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install golang
@@ -55,10 +60,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### golang-run:
 
 ```bash
 $ singularity run <container>
@@ -66,7 +71,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### golang-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -74,15 +79,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### golang-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### golang-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -91,13 +96,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### golang-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### golang-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

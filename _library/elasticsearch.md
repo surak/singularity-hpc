@@ -3,7 +3,7 @@ layout: container
 name:  "elasticsearch"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/elasticsearch/container.yaml"
-updated_at: "2022-02-01 01:28:04.672163"
+updated_at: "2022-07-07 17:20:26.435566"
 container_url: "https://hub.docker.com/_/elasticsearch"
 aliases:
  - "elasticsearch"
@@ -52,12 +52,21 @@ versions:
  - "7.14.2"
  - "7.16.2"
  - "7.16.3"
+ - "8.0.0"
+ - "8.1.2"
+ - "8.0.1"
+ - "7.17.2"
+ - "8.1.3"
+ - "7.17.3"
+ - "8.2.2"
+ - "7.17.4"
 description: "Elasticsearch is a powerful open source search and analytics engine that makes data easy to explore."
 ---
 
 This module is a singularity container wrapper for elasticsearch.
 Elasticsearch is a powerful open source search and analytics engine that makes data easy to explore.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install elasticsearch
@@ -88,10 +97,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### elasticsearch-run:
 
 ```bash
 $ singularity run <container>
@@ -99,7 +108,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### elasticsearch-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -107,15 +116,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### elasticsearch-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### elasticsearch-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -124,13 +133,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### elasticsearch-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### elasticsearch-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

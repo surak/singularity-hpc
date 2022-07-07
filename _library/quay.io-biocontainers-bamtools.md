@@ -3,20 +3,23 @@ layout: container
 name:  "quay.io/biocontainers/bamtools"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/bamtools/container.yaml"
-updated_at: "2022-02-01 01:28:13.882628"
+updated_at: "2022-07-07 17:20:42.905555"
 container_url: "https://quay.io/repository/biocontainers/bamtools"
 aliases:
  - "bamtools"
 
 versions:
- - "2.5.1--h9a82719_9"
  - "2.5.1--he860b03_4"
+ - "2.5.1--h9a82719_9"
+ - "2.5.1--hd03093a_10"
+ - "2.5.2--hd03093a_0"
 description: "C++ API and command-line toolkit for working with BAM data."
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/bamtools.
 C++ API and command-line toolkit for working with BAM data.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/bamtools
@@ -25,7 +28,7 @@ $ shpc install quay.io/biocontainers/bamtools
 Or a specific version:
 
 ```bash
-$ shpc install quay.io/biocontainers/bamtools:2.5.1--h9a82719_9
+$ shpc install quay.io/biocontainers/bamtools:2.5.1--he860b03_4
 ```
 
 And then you can tell lmod about your modules folder:
@@ -37,8 +40,8 @@ $ module use ./modules
 And load the module, and ask for help, or similar.
 
 ```bash
-$ module load quay.io/biocontainers/bamtools/2.5.1--h9a82719_9
-$ module help quay.io/biocontainers/bamtools/2.5.1--h9a82719_9
+$ module load quay.io/biocontainers/bamtools/2.5.1--he860b03_4
+$ module help quay.io/biocontainers/bamtools/2.5.1--he860b03_4
 ```
 
 You can use tab for auto-completion of module names or commands that are provided.
@@ -47,10 +50,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### bamtools-run:
 
 ```bash
 $ singularity run <container>
@@ -58,7 +61,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### bamtools-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -66,15 +69,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### bamtools-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### bamtools-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -83,13 +86,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### bamtools-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### bamtools-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

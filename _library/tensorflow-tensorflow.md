@@ -3,26 +3,36 @@ layout: container
 name:  "tensorflow/tensorflow"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/tensorflow/tensorflow/container.yaml"
-updated_at: "2022-02-01 01:28:10.907638"
+updated_at: "2022-07-07 17:18:43.200081"
 container_url: "https://hub.docker.com/r/tensorflow/tensorflow"
 aliases:
  - "python"
 
 versions:
- - "2.2.2"
  - "2.5.0-custom-op-gpu-ubuntu16"
  - "2.5.0rc0-gpu-jupyter"
  - "2.6.0"
  - "2.6.0rc0-gpu-jupyter"
  - "2.7.0"
  - "2.7.0rc0"
+ - "2.8.0"
  - "2.8.0rc0"
+ - "latest-gpu"
+ - "2.7.1-gpu"
+ - "2.7.1"
+ - "2.6.1"
+ - "2.5.1"
+ - "2.9.0rc1"
+ - "2.9.1"
+ - "2.8.2"
+ - "2.7.3"
 description: "An end-to-end open source platform for machine learning."
 ---
 
 This module is a singularity container wrapper for tensorflow/tensorflow.
 An end-to-end open source platform for machine learning.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install tensorflow/tensorflow
@@ -31,7 +41,7 @@ $ shpc install tensorflow/tensorflow
 Or a specific version:
 
 ```bash
-$ shpc install tensorflow/tensorflow:2.2.2
+$ shpc install tensorflow/tensorflow:2.5.0-custom-op-gpu-ubuntu16
 ```
 
 And then you can tell lmod about your modules folder:
@@ -43,8 +53,8 @@ $ module use ./modules
 And load the module, and ask for help, or similar.
 
 ```bash
-$ module load tensorflow/tensorflow/2.2.2
-$ module help tensorflow/tensorflow/2.2.2
+$ module load tensorflow/tensorflow/2.5.0-custom-op-gpu-ubuntu16
+$ module help tensorflow/tensorflow/2.5.0-custom-op-gpu-ubuntu16
 ```
 
 You can use tab for auto-completion of module names or commands that are provided.
@@ -53,10 +63,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### tensorflow-run:
 
 ```bash
 $ singularity run <container>
@@ -64,7 +74,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### tensorflow-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -72,15 +82,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### tensorflow-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### tensorflow-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -89,13 +99,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### tensorflow-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### tensorflow-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

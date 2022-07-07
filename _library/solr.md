@@ -3,7 +3,7 @@ layout: container
 name:  "solr"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/solr/container.yaml"
-updated_at: "2022-02-01 01:28:33.642722"
+updated_at: "2022-07-07 17:20:25.979435"
 container_url: "https://hub.docker.com/_/solr"
 aliases:
  - "post"
@@ -20,12 +20,20 @@ versions:
  - "8.11.0"
  - "8.11.1"
  - "latest"
+ - "8"
+ - "8.11"
+ - "8.10"
+ - "8.9"
+ - "8.8"
+ - "9"
+ - "9.0"
 description: "Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene™."
 ---
 
 This module is a singularity container wrapper for solr.
 Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene™.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install solr
@@ -56,10 +64,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### solr-run:
 
 ```bash
 $ singularity run <container>
@@ -67,7 +75,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### solr-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -75,15 +83,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### solr-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### solr-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -92,13 +100,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### solr-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### solr-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

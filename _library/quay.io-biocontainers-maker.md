@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/maker"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/maker/container.yaml"
-updated_at: "2022-02-01 01:28:20.230509"
+updated_at: "2022-07-07 17:20:38.917728"
 container_url: "https://quay.io/repository/biocontainers/maker"
 aliases:
  - "maker"
@@ -11,12 +11,15 @@ aliases:
 versions:
  - "2.31.11--pl526h61907ee_0"
  - "3.01.03--pl526hb8757ab_0"
+ - "3.01.03--pl5262h8f1cd36_2"
+ - "2.31.11--pl5262hec0a270_1"
 description: "A portable and easily configurable genome annotation pipeline"
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/maker.
 A portable and easily configurable genome annotation pipeline
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/maker
@@ -47,10 +50,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### maker-run:
 
 ```bash
 $ singularity run <container>
@@ -58,7 +61,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### maker-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -66,15 +69,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### maker-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### maker-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -83,13 +86,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### maker-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### maker-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

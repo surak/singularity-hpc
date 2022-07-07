@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/mummer"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/mummer/container.yaml"
-updated_at: "2022-02-01 01:28:14.166879"
+updated_at: "2022-07-07 17:20:43.348259"
 container_url: "https://quay.io/repository/biocontainers/mummer"
 aliases:
  - "mummer"
@@ -11,12 +11,14 @@ aliases:
 versions:
  - "3.23--pl526_7"
  - "3.23--pl526he1b5a44_11"
+ - "3.23--pl5321h1b792b2_13"
 description: "MUMmer is a system for rapidly aligning entire genomes in complete or in draft form."
 ---
 
 This module is a singularity container wrapper for quay.io/biocontainers/mummer.
 MUMmer is a system for rapidly aligning entire genomes in complete or in draft form.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install quay.io/biocontainers/mummer
@@ -47,10 +49,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### mummer-run:
 
 ```bash
 $ singularity run <container>
@@ -58,7 +60,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### mummer-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -66,15 +68,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### mummer-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### mummer-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -83,13 +85,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### mummer-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### mummer-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>

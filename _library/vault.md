@@ -3,7 +3,7 @@ layout: container
 name:  "vault"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/vault/container.yaml"
-updated_at: "2022-02-01 01:28:05.582019"
+updated_at: "2022-07-07 17:18:54.448099"
 container_url: "https://hub.docker.com/_/vault"
 aliases:
  - "vault"
@@ -19,12 +19,22 @@ versions:
  - "1.9.2"
  - "1.9.3"
  - "latest"
+ - "1.10.0"
+ - "1.9.4"
+ - "1.8.9"
+ - "1.7.10"
+ - "1.6.7"
+ - "1.10.2"
+ - "1.9.6"
+ - "1.8.11"
+ - "1.10.3"
 description: "Vault is a tool for securely accessing secrets via a unified interface and tight access control."
 ---
 
 This module is a singularity container wrapper for vault.
 Vault is a tool for securely accessing secrets via a unified interface and tight access control.
 After [installing shpc](#install) you will want to install this container module:
+
 
 ```bash
 $ shpc install vault
@@ -55,10 +65,10 @@ You can use tab for auto-completion of module names or commands that are provide
 
 ### Commands
 
-When you install this module, you'll be able to load it to make the following commands accessible.
+When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### -run:
+#### vault-run:
 
 ```bash
 $ singularity run <container>
@@ -66,7 +76,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -shell:
+#### vault-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -74,15 +84,15 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### -exec:
+#### vault-exec:
 
 ```bash
-$ singularity exec -s /bin/sh <container> "$@"
+$ singularity exec <container> "$@"
 $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### -inspect:
+#### vault-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -91,13 +101,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### -inspect-runscript:
+#### vault-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### -inspect-deffile:
+#### vault-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
