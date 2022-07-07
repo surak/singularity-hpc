@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/cutadapt"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/cutadapt/container.yaml"
-updated_at: "2022-07-07 17:20:34.431834"
+updated_at: "2022-07-07 17:22:05.495004"
 container_url: "https://quay.io/repository/biocontainers/cutadapt"
 aliases:
  - "cutadapt"

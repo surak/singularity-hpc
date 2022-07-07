@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/turbine"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/turbine/container.yaml"
-updated_at: "2022-07-07 17:20:08.221037"
+updated_at: "2022-07-07 17:21:39.968820"
 container_url: "https://github.com/orgs/autamus/packages/container/package/turbine"
 aliases:
  - "turbine"
