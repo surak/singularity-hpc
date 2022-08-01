@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/bwa"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/bwa/container.yaml"
-updated_at: "2022-08-01 15:28:27.718701"
+updated_at: "2022-08-01 18:13:56.691775"
 container_url: "https://quay.io/repository/biocontainers/bwa"
 aliases:
  - "bwa"
