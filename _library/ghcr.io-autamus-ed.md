@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/ed"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/ed/container.yaml"
-updated_at: "2022-08-01 15:22:13.285941"
+updated_at: "2022-08-01 15:27:44.573249"
 container_url: "https://github.com/orgs/autamus/packages/container/package/ed"
 aliases:
  - "ed"
