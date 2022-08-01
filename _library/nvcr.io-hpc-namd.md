@@ -3,7 +3,7 @@ layout: container
 name:  "nvcr.io/hpc/namd"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/nvcr.io/hpc/namd/container.yaml"
-updated_at: "2022-07-07 17:20:29.957120"
+updated_at: "2022-08-01 15:09:21.269420"
 container_url: "https://ngc.nvidia.com/catalog/containers/hpc:lammps/tags"
 aliases:
  - "charmrun"
@@ -25,6 +25,7 @@ versions:
  - "3.0-alpha3-singlenode-arm64"
  - "3.0-alpha3-singlenode-x86_64"
  - "3.0-alpha9-singlenode"
+ - "3.0-alpha11"
 description: "NAMD is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. NAMD uses the popular molecular graphics program VMD for simulation setup and trajectory analysis, but is also file-comp atible with AMBER, CHARMM, and X-PLOR."
 ---
 

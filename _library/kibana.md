@@ -3,7 +3,7 @@ layout: container
 name:  "kibana"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/kibana/container.yaml"
-updated_at: "2022-07-07 17:20:36.759604"
+updated_at: "2022-08-01 15:09:17.692408"
 container_url: "https://hub.docker.com/_/kibana"
 aliases:
  - "kibana"
@@ -32,6 +32,9 @@ versions:
  - "7.17.3"
  - "8.2.2"
  - "7.17.4"
+ - "8.2.3"
+ - "8.3.3"
+ - "7.17.5"
 description: "Kibana gives shape to any kind of data — structured and unstructured — indexed in Elasticsearch."
 ---
 

@@ -1,39 +1,33 @@
 ---
 layout: container
-name:  "tomcat"
+name:  "quay.io/pawsey/openfoam"
 maintainer: "@vsoch"
-github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/tomcat/container.yaml"
-updated_at: "2022-08-01 15:09:18.139201"
-container_url: "https://hub.docker.com/_/tomcat"
+github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/pawsey/openfoam/container.yaml"
+updated_at: "2022-08-01 15:09:09.556583"
+container_url: "https://quay.io/repository/pawsey/openfoam"
 
 versions:
- - "10.0.5-jdk11-adoptopenjdk-hotspot"
- - "10.0.6-jdk11-adoptopenjdk-hotspot"
- - "10.0.7-jdk11-adoptopenjdk-hotspot"
- - "10.0.8-jdk11-adoptopenjdk-hotspot"
- - "10.1.0"
- - "latest"
- - "10"
- - "10-jdk17"
- - "10-jdk16"
- - "10-jdk15"
- - "10-jdk14"
-description: "Apache Tomcat is an open source implementation of the Java Servlet and JavaServer Pages technologies"
+ - "v2012"
+ - "v2006"
+ - "v1912"
+ - "v1812"
+ - "v1712"
+description: "OpenFOAM (openfoam.com) images built on top of MPICH."
 ---
 
-This module is a singularity container wrapper for tomcat.
-Apache Tomcat is an open source implementation of the Java Servlet and JavaServer Pages technologies
+This module is a singularity container wrapper for quay.io/pawsey/openfoam.
+OpenFOAM (openfoam.com) images built on top of MPICH.
 After [installing shpc](#install) you will want to install this container module:
 
 
 ```bash
-$ shpc install tomcat
+$ shpc install quay.io/pawsey/openfoam
 ```
 
 Or a specific version:
 
 ```bash
-$ shpc install tomcat:10.0.5-jdk11-adoptopenjdk-hotspot
+$ shpc install quay.io/pawsey/openfoam:v2012
 ```
 
 And then you can tell lmod about your modules folder:
@@ -45,8 +39,8 @@ $ module use ./modules
 And load the module, and ask for help, or similar.
 
 ```bash
-$ module load tomcat/10.0.5-jdk11-adoptopenjdk-hotspot
-$ module help tomcat/10.0.5-jdk11-adoptopenjdk-hotspot
+$ module load quay.io/pawsey/openfoam/v2012
+$ module help quay.io/pawsey/openfoam/v2012
 ```
 
 You can use tab for auto-completion of module names or commands that are provided.
@@ -58,7 +52,7 @@ You can use tab for auto-completion of module names or commands that are provide
 When you install this module, you will be able to load it to make the following commands accessible.
 Examples for both Singularity, Podman, and Docker (container technologies supported) are included.
 
-#### tomcat-run:
+#### openfoam-run:
 
 ```bash
 $ singularity run <container>
@@ -66,7 +60,7 @@ $ podman run --rm  -v ${PWD} -w ${PWD} <container>
 $ docker run --rm  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### tomcat-shell:
+#### openfoam-shell:
 
 ```bash
 $ singularity shell -s /bin/sh <container>
@@ -74,7 +68,7 @@ $ podman run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 $ docker run --it --rm --entrypoint /bin/sh  -v ${PWD} -w ${PWD} <container>
 ```
 
-#### tomcat-exec:
+#### openfoam-exec:
 
 ```bash
 $ singularity exec <container> "$@"
@@ -82,7 +76,7 @@ $ podman run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 $ docker run --it --rm --entrypoint ""  -v ${PWD} -w ${PWD} <container> "$@"
 ```
 
-#### tomcat-inspect:
+#### openfoam-inspect:
 
 Podman and Docker only have one inspect type.
 
@@ -91,13 +85,13 @@ $ podman inspect <container>
 $ docker inspect <container>
 ```
 
-#### tomcat-inspect-runscript:
+#### openfoam-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### tomcat-inspect-deffile:
+#### openfoam-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
@@ -105,7 +99,7 @@ $ singularity inspect -d <container>
 
 
 
-#### tomcat
+#### openfoam
 
 ```bash
 $ singularity run <container>

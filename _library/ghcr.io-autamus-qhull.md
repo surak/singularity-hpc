@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/qhull"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/qhull/container.yaml"
-updated_at: "2022-07-07 17:21:26.711808"
+updated_at: "2022-08-01 15:08:12.074409"
 container_url: "https://github.com/orgs/autamus/packages/container/package/qhull"
 aliases:
  - "qconvex"

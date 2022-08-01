@@ -3,7 +3,7 @@ layout: container
 name:  "nvcr.io/nvidia/pytorch"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/nvcr.io/nvidia/pytorch/container.yaml"
-updated_at: "2022-07-07 17:20:33.349349"
+updated_at: "2022-08-01 15:09:23.055591"
 container_url: "https://ngc.nvidia.com/catalog/containers/nvidia:pytorch/tags"
 
 versions:
@@ -21,6 +21,8 @@ versions:
  - "22.03-py3"
  - "22.04-py3"
  - "22.05-py3"
+ - "22.06-py3"
+ - "22.07-py3"
 description: "PyTorch is a GPU accelerated tensor computational framework with a Python front end. Functionality can be easily extended with common Python libraries such as NumPy, SciPy, and Cython. Automatic differentiation is done with a tape-based system at both a functional and neural network layer level."
 ---
 

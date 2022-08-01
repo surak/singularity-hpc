@@ -3,7 +3,7 @@ layout: container
 name:  "quay.io/biocontainers/salmon"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/quay.io/biocontainers/salmon/container.yaml"
-updated_at: "2022-07-07 17:22:05.927103"
+updated_at: "2022-08-01 15:09:02.894521"
 container_url: "https://quay.io/repository/biocontainers/salmon"
 aliases:
  - "salmon"
@@ -15,6 +15,7 @@ versions:
  - "1.7.0--h84f40af_0"
  - "1.8.0--h7e5ed60_1"
  - "1.7.0--h10bb6b4_1"
+ - "1.9.0--h7e5ed60_0"
 description: "Salmon is a wicked-fast program to produce a highly-accurate, transcript-level quantification estimates from RNA-seq data."
 ---
 
