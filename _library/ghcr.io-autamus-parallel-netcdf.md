@@ -3,7 +3,7 @@ layout: container
 name:  "ghcr.io/autamus/parallel-netcdf"
 maintainer: "@vsoch"
 github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/parallel-netcdf/container.yaml"
-updated_at: "2022-08-01 15:14:24.516928"
+updated_at: "2022-08-01 15:21:45.112235"
 container_url: "https://github.com/orgs/autamus/packages/container/package/parallel-netcdf"
 aliases:
  - "pnetcdf-config"
