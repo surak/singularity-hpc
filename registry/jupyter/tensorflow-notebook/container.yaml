@@ -3,10 +3,11 @@ url: https://hub.docker.com/r/jupyter/tensorflow-notebook
 maintainer: '@vsoch'
 description: Jupyter Tensorflow Notebook from https://github.com/jupyter/docker-stacks
 latest:
-  ubuntu-20.04: sha256:6cbea5e04bd3bc0ab0c8920aaee1c3a1acd57afc1c8e821c0ee0aab5dcecec45
+  ubuntu-22.04: sha256:bafd96316ae3f7eaf52a3f4df3b90e9c12163ceeebfccc9e2e44efd3219c9c8d
 tags:
-  latest: sha256:6cbea5e04bd3bc0ab0c8920aaee1c3a1acd57afc1c8e821c0ee0aab5dcecec45
-  ubuntu-20.04: sha256:6cbea5e04bd3bc0ab0c8920aaee1c3a1acd57afc1c8e821c0ee0aab5dcecec45
+  latest: sha256:bafd96316ae3f7eaf52a3f4df3b90e9c12163ceeebfccc9e2e44efd3219c9c8d
+  ubuntu-20.04: sha256:b62939e2279963d17f3cc1a874cf74590f42a06c109c9913da5d2375364ef75f
+  ubuntu-22.04: sha256:bafd96316ae3f7eaf52a3f4df3b90e9c12163ceeebfccc9e2e44efd3219c9c8d
 filter:
 - ubuntu*
 aliases:
