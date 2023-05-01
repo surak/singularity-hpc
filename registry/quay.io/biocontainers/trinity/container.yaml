@@ -7,7 +7,7 @@ description: Trinity, developed at the Broad Institute and the Hebrew University
 filter:
 - ^(?!.*2011).*$
 latest:
-  2.13.2--h15cb65e_2: sha256:6c87b7700eab5b4044373fed374c566d4c5b5d9bd6e5f78ad5a07f5ce84ef8c6
+  2.15.1--hff880f7_1: sha256:cbf4fc1f67b4d1d20ad00f89c9a18774b152d1b46a45b666c64cfb594e1f6346
 tags:
   2.11.0--h5ef6573_1: sha256:6d35d716aa12ba7b0c715fa8a30359b43ba9151e854dc4407b949e7b57c3a50a
   2.12.0--h5ef6573_0: sha256:4045560dad56fee946c9bcccd2ba0e373292a5adf8a2f7ba09917cbaeaa74323
@@ -15,6 +15,8 @@ tags:
   2.13.2--ha140323_0: sha256:727ae4211b1a2fdfa33c1bb30fbf8ffc231d610c6497fe7150b031fa9a70b7b1
   2.13.2--h15cb65e_2: sha256:6c87b7700eab5b4044373fed374c566d4c5b5d9bd6e5f78ad5a07f5ce84ef8c6
   2.12.0--ha140323_3: sha256:d44cb9353096e558adf34f4b6219c252d6b3523db9555c7dbecd0ed980e68d58
+  2.15.1--hff880f7_1: sha256:cbf4fc1f67b4d1d20ad00f89c9a18774b152d1b46a45b666c64cfb594e1f6346
+  2.13.2--hff880f7_4: sha256:e6352a3026242bdb0102038d98854b220b13ffab3b254de539b05c2b56eb007e
 aliases:
   Trinity: /usr/local/bin/Trinity
   trinity: /usr/local/bin/Trinity
