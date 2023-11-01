@@ -3,9 +3,9 @@ url: https://hub.docker.com/r/rocker/ml-verse
 maintainer: '@vsoch'
 description: Machine learning in R.
 latest:
-  latest: sha256:82d89de18b4f71a6451d55070ac88b83517866dd55cbca219c6cd6acdeab5474
+  latest: sha256:095724c0987cc81996bd9c3405466a6e86ee5b62b7763151fcff7c4799757b0d
 tags:
-  latest: sha256:82d89de18b4f71a6451d55070ac88b83517866dd55cbca219c6cd6acdeab5474
+  latest: sha256:095724c0987cc81996bd9c3405466a6e86ee5b62b7763151fcff7c4799757b0d
 filter:
 - latest
 aliases:
