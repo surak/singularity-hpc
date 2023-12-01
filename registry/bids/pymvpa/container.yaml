@@ -4,9 +4,11 @@ maintainer: '@vsoch'
 description: Take fMRI data and generates ROI based MultiVariate Pattern Analysis
   (MVPA) outputs (https://github.com/BIDS-Apps/PyMVPA)
 latest:
-  v2.0.2: sha256:923d3112afcde2dc182aea054ec70efdf42fc70e2e0a2bb252f7b9203965e250
+  v4.0.3: sha256:b9b443b6803ec40e82fd617cb9062641a1c4bbd6a6cd6d77c2a3dc2136e77b57
 tags:
-  latest: sha256:923d3112afcde2dc182aea054ec70efdf42fc70e2e0a2bb252f7b9203965e250
-  v2.0.2: sha256:923d3112afcde2dc182aea054ec70efdf42fc70e2e0a2bb252f7b9203965e250
+  latest: sha256:727c990181802f4491fede43ef90b1face3eebc9257a1a993746f89dbcb388a4
+  v2.0.2: sha256:727c990181802f4491fede43ef90b1face3eebc9257a1a993746f89dbcb388a4
+  unstable: sha256:727c990181802f4491fede43ef90b1face3eebc9257a1a993746f89dbcb388a4
+  v4.0.3: sha256:b9b443b6803ec40e82fd617cb9062641a1c4bbd6a6cd6d77c2a3dc2136e77b57
 filter:
 - v*
