@@ -6,10 +6,7 @@ latest:
     ls nvcr.io/nvidia/hpc-benchmarks: unsupported status code 401; body: <html>":
     could not parse reference'
 tags:
-  20.10-hpl: "crane digest nvcr.io/nvidia/hpc-benchmarks:20.10-hpl: unsupported status\
-    \ code 401; body: <html>\r\n<head><title>401 Authorization Required</title></head>\r\
-    \n<body bgcolor=\"white\">\r\n<center><h1>401 Authorization Required</h1></center>\r\
-    \n<hr><center>nginx/1.14.2</center>\r\n</body>\r\n</html>\r\n"
+  20.10-hpl: sha256:b8df1e330b9e0dbcda2108c88a5350795293b1f1cd231c40a763bceaf94eda98
   'crane ls nvcr.io/nvidia/hpc-benchmarks: unsupported status code 401; body: <html>': 'crane
     digest nvcr.io/nvidia/hpc-benchmarks:crane ls nvcr.io/nvidia/hpc-benchmarks: unsupported
     status code 401; body: <html>: parsing reference "nvcr.io/nvidia/hpc-benchmarks:crane
@@ -18,6 +15,11 @@ tags:
   <body bgcolor="white">: 'crane digest nvcr.io/nvidia/hpc-benchmarks:<body bgcolor="white">:
     parsing reference "nvcr.io/nvidia/hpc-benchmarks:<body bgcolor=\"white\">": could
     not parse reference'
+  sha256-fd224e3a16f84e6a7a70e270a3d84a64395dc584c615a218d7367fe194cca88e.vex: sha256:4aa142ccfff65f21e2e367ecdabcd766776bd8eb84684110d57a464369ffdf86
+  sha256-128e4c879b906ab98317c3e64dcc3ae70ba18d943c64558276d9a6ca2a1a5e7b.sig: sha256:14d0b8b274bbe0cbf4b6be400859f8d4b9205dd0843dfc43c8aa85302e4c481d
+  sha256-76a06b6796f4131369257e9925937a898df11c2bd30a3003ba642d4bfb34c5bb.sbom: sha256:d8251118331b6086ae70e76a62921e7ff03078e2c47509ad1d2e374bac82c539
+  sha256-c52ce8822537f8b520aed30dab26cc811f7be934dcf3f80e804f81cf0e129e19.sbom: sha256:06b5e060b5c4f1e2e327f2e375d1e9254737582dfe0fb443e0a7eceac95fea31
+  sha256-27ec15a807dd57e1c01ada9f5b9a64c99fa27c4d780f06242e22ceccb2c5a1b3.sbom: sha256:77f2162f7c93a83c943cae5c788ac383f5a28fdfdd70ae72cd919f3b1301e66d
 maintainer: '@vsoch'
 url: https://ngc.nvidia.com/catalog/containers/nvidia:hpc-benchmarks/tags
 description: 'The NVIDIA HPC-Benchmarks collection provides three NVIDIA accelerated
